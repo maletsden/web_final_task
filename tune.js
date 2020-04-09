@@ -5,9 +5,9 @@ function tune(arr) {
         if (freq === 0) return '-';
         if (freq === expected_results[i]) return "OK";
         if (freq < expected_results[i]) {
-            return freq < expected_results[i] * 0.97 ? ">>•" : ">•";
+            return freq <= expected_results[i] * 0.97 ? ">>•" : ">•";
         } else {
-            return freq > expected_results[i] * 1.03 ? "<<•" : "<•";
+            return freq >= expected_results[i] * 1.03 ? "<<•" : "<•";
         }
     });
 }
